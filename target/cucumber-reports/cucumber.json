@@ -1,0 +1,87 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2019-07-30T22:32:27.696Z",
+        "before": [
+          {
+            "result": {
+              "duration": 802889,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Step_Base.before(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Validate user flow of  onboarding screen",
+        "description": "",
+        "id": "login-feature;validate-user-flow-of--onboarding-screen",
+        "after": [
+          {
+            "result": {
+              "duration": 257532,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Step_Base.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 43158132310,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am in Welcome screen of Betway",
+            "match": {
+              "location": "UserJourney_Step.i_am_in_Welcome_screen_of_Betway()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 114522,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on forgot password",
+            "match": {
+              "location": "UserJourney_Step.i_click_on_forgot_password()"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Login feature",
+    "description": "  I want to verify login ",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/feature/UserJourney.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
