@@ -20,6 +20,7 @@ public class UserJourney_Step extends TestBase {
 		userjouney.isUserInWelcomeScreen();
 //		userjouney.loginUser();
 //		userjouney.forgotPasswordDetail();
+		userjouney.scrollbottom();
 		
 	   
 	}

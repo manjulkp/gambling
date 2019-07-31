@@ -53,7 +53,7 @@ public class UserJourney_Page extends ScreenBase {
 	
 	@FindBys({
 		//@FindBy(xpath="//*[@class=\"jsx-3509740173 Menu__nav-item\"][1]"),
-			@FindBy(xpath="//*[@class=\"jsx-3509740173 Menu__nav-item\"]")
+		@FindBy(xpath="//*[@class=\"jsx-3509740173 Menu__nav-item\"]")
 		//@FindBy(xpath ="//*[contains(text(),'sports')]")
 		})
 		private List<WebElement> sports;
@@ -121,6 +121,11 @@ public class UserJourney_Page extends ScreenBase {
 	
 	public void scrollbottom()
 	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	      
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+		
 		
 	}
 
