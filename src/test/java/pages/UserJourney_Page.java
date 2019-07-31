@@ -1,6 +1,7 @@
 package pages;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -46,18 +48,28 @@ public class UserJourney_Page extends ScreenBase {
 	@FindBy(xpath = "//form[@id='ForgotLoginRequestForm']/descendant::*[@id='ForgotLoginSubmitButton']")
 	private WebElement submit;
 	
-	@FindBy(xpath ="//*[contains(text(),'sports')]")
-	private WebElement sports;
+//	@FindBy(xpath ="//*[@id='BrandList']/descendant::*[contains(text(),'sports')]")
+//	private WebElement sports;
+	
+	@FindBys({
+		//@FindBy(xpath="//*[@class=\"jsx-3509740173 Menu__nav-item\"][1]"),
+			@FindBy(xpath="//*[@class=\"jsx-3509740173 Menu__nav-item\"]")
+		//@FindBy(xpath ="//*[contains(text(),'sports')]")
+		})
+		private List<WebElement> sports;
 
 	public void isUserInWelcomeScreen() {
 		clickAble(driver, Close_Cookies);
 		//Assert.assertTrue(isElementPresent(Login), "The Welcome is not loaded");
-		//clickAble(driver, sports);
-		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        //This will scroll the web page till end.		
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		for(WebElement e : sports)
+		{
+			System.out.println(e.getText());
+			if(e.getText().equals("casino"))
+			{
+			e.click();
+			break;
+			}
+		}
 
 	}
 
